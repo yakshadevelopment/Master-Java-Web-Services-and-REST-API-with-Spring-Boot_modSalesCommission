@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://yaksha.edu/salesapp" xmlns:tns="http://yaksha.edu/salesapp" elementFormDefault="qualified">
+<xs:element name="GetSalespersonRequest">
+<xs:complexType>
+ <xs:sequence>
+   <xs:element name="name" type="xs:string"/>
+  <xs:element name="sales-value" type="xs:double"/>
+ </xs:sequence>
+ </xs:complexType>
+ </xs:element>
+
+<xs:element name="GetSalespersonResponse">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element name="Salesperson" type="tns:SalesPerson"></xs:element>
+ </xs:sequence>
+ </xs:complexType>
+ </xs:element>
+ 
+ 
+ <xs:complexType name="SalesPerson">
+   <xs:sequence>
+  <xs:element name="id" type="xs:int"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="sales-value" type="xs:double"/>
+  <xs:element name="commission-value" type="xs:double"/>
+     </xs:sequence>
+ </xs:complexType>
+ 
+ <xs:element name="GetAllSalespersonRequest">
+ <xs:complexType>
+ </xs:complexType>
+ </xs:element>
+
+<xs:element name="GetAllSalespersonResponse">
+ <xs:complexType>
+ <xs:sequence>
+  <xs:element name="Salesperson" type="tns:SalesPerson" maxOccurs="unbounded"></xs:element>
+ </xs:sequence>
+ </xs:complexType>
+ </xs:element>
+ 
+
+</xs:schema>

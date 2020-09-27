@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSalespersonResponse xmlns="http://yaksha.edu/salesapp" xsi:schemaLocation="http://yaksha.edu/salesapp sales_app.xsd"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <Salesperson>
+<id>1</id>
+<name>Milton</name>
+<sales-value>500000.00</sales-value>
+<commission-value>50000.00</commission-value>
+</Salesperson>
+</GetSalespersonResponse>
